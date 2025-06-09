@@ -1,0 +1,18 @@
+{% extends 'turnos/base.html' %}
+
+{% block title %}Disponibilidades registradas{% endblock %}
+
+{% block content %}
+  <h2>Lista de disponibilidades</h2>
+  <ul>
+    {% for disponibilidad in disponibilidades %}
+      <li>
+        Dr. {{ disponibilidad.id_doctor.nombre }} {{ disponibilidad.id_doctor.apellido }} -
+        {{ disponibilidad.dia_semana }}: {{ disponibilidad.hora_inicio }} a {{ disponibilidad.hora_fin }}
+      </li>
+    {% empty %}
+      <li>No hay disponibilidades registradas.</li>
+    {% endfor %}
+  </ul>
+  <a href="{% url 'crear_disponibilidad' %}">Crear nueva disponibilidad</a>
+{% endblock %}

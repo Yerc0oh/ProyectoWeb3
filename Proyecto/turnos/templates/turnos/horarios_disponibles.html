@@ -1,0 +1,20 @@
+{% extends 'turnos/base.html' %}
+
+{% block title %}Horarios Disponibles{% endblock %}
+
+{% block content %}
+  <h2>Horarios disponibles para el Dr. {{ doctor.nombre }} {{ doctor.apellido }}</h2>
+  <h3>Día: {{ dia }}</h3>
+
+  {% if horas_disponibles %}
+    <ul>
+      {% for hora in horas_disponibles %}
+        <li>{{ hora }}</li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>No hay horarios disponibles para este día.</p>
+  {% endif %}
+
+  <a href="{% url 'ver_disponibilidad' %}">Volver</a>
+{% endblock %}
