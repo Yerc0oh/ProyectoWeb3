@@ -4,4 +4,5 @@
 **Callisaya Suarez Jose Fernando <br>**
 **Conde Oquendo Maya Bettzy <br>**
 **Mamani Huanca Dilan Alvaro. <br>**
+**Masco Vargas Melani <br>**
 
