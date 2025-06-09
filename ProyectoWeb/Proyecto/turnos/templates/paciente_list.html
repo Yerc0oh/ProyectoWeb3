@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block title %}Lista de Pacientes{% endblock %}
+
+{% block content %}
+<h2>Lista de Pacientes</h2>
+
+{% if pacientes %}
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Email</th>
+            <th>Teléfono</th>
+            <th>Fecha de Nacimiento</th>
+            <th>Dirección</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for paciente in pacientes %}
+        <tr>
+            <td>{{ paciente.nombre }}</td>
+            <td>{{ paciente.apellido }}</td>
+            <td>{{ paciente.email }}</td>
+            <td>{{ paciente.telefono }}</td>
+            <td>{{ paciente.fecha_nacimiento }}</td>
+            <td>{{ paciente.direccion }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% else %}
+<p>No hay pacientes registrados.</p>
+{% endif %}
+
+<a href="{% url 'registrar_paciente' %}" class="btn btn-primary">Agregar Paciente</a>
+{% endblock %}
