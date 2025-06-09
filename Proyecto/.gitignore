@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -209,3 +210,17 @@ Thumbs.db
 # Migration files (opcional - descomenta si no quieres trackear migraciones)
 # */migrations/*
 # !*/migrations/__init__.py
+=======
+# Entorno virtual
+venv/
+
+# Archivos temporales de Python
+*.pyc
+__pycache__/
+
+# Base de datos local
+db.sqlite3
+
+# Archivos de configuración locales
+.env
+>>>>>>> 2366e2145e82f2cdd40e94038cf91c66bec8e42e
